@@ -1,26 +1,36 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 function Todo() {
 
-    const [todo, setTodo] = useState<string>("");
+    const inputRef = useRef<HTMLInputElement | null>(null);
+
+    // const [todo, setTodo] = useState<string>("");
     const [todoList, setTodoList] = useState<string[]>([]);
 
     const addTodo = () => {
-        console.log(todo);
-        setTodoList([...todoList, todo]);
-        setTodo("");
+        if (inputRef.current) {
+            const todo = inputRef.current.value;
+            setTodoList(
+                [
+                    ...todoList,
+                    todo
+                ]
+            );
+        }
+        // setTodo("");
     }
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setTodo(e.target.value);
-    }
+    // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     setTodo(e.target.value);
+    // }
 
     return (
         <div>
-            <input type="text"
+            <input type="text" ref={inputRef}
                 placeholder='Type TODO'
-                value={todo}
-                onChange={(e) => handleChange(e)} />
+            // value={todo}
+            // onChange={(e) => handleChange(e)} 
+            />
             <button onClick={() => addTodo()}>Add TODO</button>
             <ol>
                 {todoList.map(item => {
