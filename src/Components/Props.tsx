@@ -1,6 +1,4 @@
-import React from 'react';
-
-interface typeProps {
+type typeProps = {
     ts?: string;
     children?: React.ReactNode;
 }

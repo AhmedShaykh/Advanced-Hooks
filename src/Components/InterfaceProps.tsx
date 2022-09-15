@@ -1,6 +1,4 @@
-import React from 'react';
-
-type typeProps = {
+interface typeProps {
     data: string;
     lang?: string;
 }
