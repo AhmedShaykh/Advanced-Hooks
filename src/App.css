@@ -12,3 +12,23 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+input {
+  width: 30rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  margin: 1rem;
+  border-radius: 8px solid;
+}
+
+button {
+  width: 7rem;
+  height: 2.2rem;
+  font-size: 1rem;
+  border-radius: 6px solid;
+  cursor: pointer;
+}
+
+li {
+  margin: 3rem;
+}

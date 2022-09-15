@@ -1,16 +1,32 @@
 import { useState } from 'react';
-import { Input } from '@chakra-ui/react';
 
 function Todo() {
 
-    const [todo, setTodo] = useState("");
+    const [todo, setTodo] = useState<string>("");
+    const [todoList, setTodoList] = useState<string[]>([]);
+
+    const addTodo = () => {
+        console.log(todo);
+        setTodoList([...todoList, todo]);
+        setTodo("");
+    }
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setTodo(e.target.value);
+    }
 
     return (
         <div>
-            <Input type="text"
+            <input type="text"
                 placeholder='Type TODO'
                 value={todo}
-                onChange={(e) => setTodo(e.target.value)} />
+                onChange={(e) => handleChange(e)} />
+            <button onClick={() => addTodo()}>Add TODO</button>
+            <ol>
+                {todoList.map(item => {
+                    return <li key={item}>{item}</li>
+                })}
+            </ol>
         </div>
     )
 }
