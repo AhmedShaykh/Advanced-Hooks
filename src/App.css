@@ -32,3 +32,17 @@ button {
 li {
   margin: 3rem;
 }
+
+.container {
+  margin: 3rem;
+  padding: 4rem;
+}
+
+.container button {
+  width: 8rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px solid;
+  margin: 2rem;
+}
