@@ -1,1 +1,1 @@
-# React In TypeScript!
+# React TypeScript!
