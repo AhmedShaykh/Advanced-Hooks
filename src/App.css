@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #1f2229;
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,36 +13,6 @@
   color: white;
 }
 
-input {
-  width: 30rem;
-  height: 2rem;
-  font-size: 1.2rem;
-  margin: 1rem;
-  border-radius: 8px solid;
-}
-
-button {
-  width: 7rem;
-  height: 2.2rem;
-  font-size: 1rem;
-  border-radius: 6px solid;
-  cursor: pointer;
-}
-
-li {
-  margin: 3rem;
-}
-
-.container {
-  margin: 3rem;
-  padding: 4rem;
-}
-
-.container button {
-  width: 8rem;
-  height: 2.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 6px solid;
-  margin: 2rem;
+.App-link {
+  color: #61dafb;
 }
