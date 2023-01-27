@@ -10,7 +10,8 @@ const UseState = () => {
 
     return (
         <div>
-            <input type="text"
+            <input
+                type="text"
                 placeholder="Enter Your Country"
                 onChange={handleChange}
             />

@@ -1,12 +1,5 @@
 import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-interface UserStateValue {
-    username: string;
-};
-
-interface UserState {
-    value: UserStateValue;
-};
+import { UserState, UserStateValue } from "./Type";
 
 const initialState: UserState = {
     value: {
